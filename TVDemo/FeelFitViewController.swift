@@ -3,7 +3,7 @@
 //  TVDemo
 //
 //  Created by Darshit Vadodaria on 01/05/18.
-//  Copyright © 2018 Darshit Vadodaria. All rights reserved.
+//  Copyright © 2018 Simform Solutions PVT LTD. All rights reserved.
 //
 
 import UIKit

@@ -19,6 +19,8 @@
 		38A1287F209C1C91001669D1 /* BarlowSemiCondensed-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 38A1286D209C1C91001669D1 /* BarlowSemiCondensed-SemiBold.ttf */; };
 		38A12884209C2590001669D1 /* WorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A12883209C2590001669D1 /* WorkoutTableViewCell.swift */; };
 		38CE91DE209833B700007581 /* FeelFitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CE91DD209833B700007581 /* FeelFitViewController.swift */; };
+		38CFD65F20A0381400311F9D /* Data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38CFD65D20A0381400311F9D /* Data.plist */; };
+		38CFD66020A0381400311F9D /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CFD65E20A0381400311F9D /* Constant.swift */; };
 		DED85DACAB7F1001A795894E /* Pods_TVDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A2FAFED710F147BB272893E /* Pods_TVDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +39,8 @@
 		38A1286D209C1C91001669D1 /* BarlowSemiCondensed-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BarlowSemiCondensed-SemiBold.ttf"; sourceTree = "<group>"; };
 		38A12883209C2590001669D1 /* WorkoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewCell.swift; sourceTree = "<group>"; };
 		38CE91DD209833B700007581 /* FeelFitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelFitViewController.swift; sourceTree = "<group>"; };
+		38CFD65D20A0381400311F9D /* Data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Data.plist; sourceTree = "<group>"; };
+		38CFD65E20A0381400311F9D /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		3A2FAFED710F147BB272893E /* Pods_TVDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TVDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		450BF2665E19CE4E7217184F /* Pods-TVDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-TVDemo/Pods-TVDemo.release.xcconfig"; sourceTree = "<group>"; };
 		94BFAF68D0D76E9ECDB43C29 /* Pods-TVDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TVDemo/Pods-TVDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -89,6 +93,8 @@
 				387108982093218100ACABBC /* VideoCollectionViewCell.swift */,
 				38A12883209C2590001669D1 /* WorkoutTableViewCell.swift */,
 				38CE91DD209833B700007581 /* FeelFitViewController.swift */,
+				38CFD65E20A0381400311F9D /* Constant.swift */,
+				38CFD65D20A0381400311F9D /* Data.plist */,
 				3871088B2092E86900ACABBC /* Main.storyboard */,
 				3871088E2092E86900ACABBC /* Assets.xcassets */,
 				38A1285E209C1C91001669D1 /* Fonts */,
@@ -179,6 +185,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38CFD65F20A0381400311F9D /* Data.plist in Resources */,
 				38A1287E209C1C91001669D1 /* BarlowSemiCondensed-Regular.ttf in Resources */,
 				38A12873209C1C91001669D1 /* BarlowSemiCondensed-Bold.ttf in Resources */,
 				3871088F2092E86900ACABBC /* Assets.xcassets in Resources */,
@@ -243,6 +250,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38CFD66020A0381400311F9D /* Constant.swift in Sources */,
 				38CE91DE209833B700007581 /* FeelFitViewController.swift in Sources */,
 				38A12884209C2590001669D1 /* WorkoutTableViewCell.swift in Sources */,
 				3871089720931E7100ACABBC /* DetailViewController.swift in Sources */,

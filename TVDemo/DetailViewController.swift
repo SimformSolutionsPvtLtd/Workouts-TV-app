@@ -3,21 +3,22 @@
 //  TVDemo
 //
 //  Created by Darshit Vadodaria on 27/04/18.
-//  Copyright © 2018 Darshit Vadodaria. All rights reserved.
+//  Copyright © 2018 Simform Solutions PVT LTD. All rights reserved.
 //
 
 import UIKit
 import AVKit
 import AVFoundation
 
-class DetailViewController: UIViewController, AVPlayerViewControllerDelegate {
+class DetailViewController: UIViewController{
 
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var lblDetail: UILabel!
     @IBOutlet weak var imgWorkOut: UIImageView!
     
     @IBOutlet weak var videoCollectionView: UICollectionView!
-    let arrImages = ["Aerobics","Strength","Flexibility","Balance"]
+    var dictWorkOut : [String:Any]?
+    var arrWorkOuts :[[String:Any]] = []
     var strDetail = ""
     var strTitle = ""
     var workOutName = ""
@@ -27,32 +28,24 @@ class DetailViewController: UIViewController, AVPlayerViewControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        lblTitle.text = strTitle
-        lblDetail.text = strDetail
-        lblDetail.sizeToFit()
-        imgWorkOut.image = UIImage(named: workOutName)
+        setData()
         // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func setData(){
+        lblTitle.text = "\(dictWorkOut?["title"] ?? "")"
+        lblDetail.text = "\(dictWorkOut?["detailText"] ?? "")"
+        lblDetail.sizeToFit()
+        imgWorkOut.image = UIImage(named: "\(dictWorkOut?["image"] ?? "")")
     }
-    
-   
-    
+
     func startPlaying(){
         
-        
-        let url = URL.init(string: "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")
+        let url = URL.init(string: VIDEO_URL)
         let player = AVPlayer(url:url!)
         
         playerController = AVPlayerViewController()
-        
-        
         NotificationCenter.default.addObserver(self, selector: #selector(DetailViewController.didfinishplaying(note:)),name:NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: player.currentItem)
-        
         playerController.player = player
         playerController.delegate = self
         
@@ -60,16 +53,18 @@ class DetailViewController: UIViewController, AVPlayerViewControllerDelegate {
         
         self.present(playerController,animated:true,completion:nil)
     }
+}
+
+extension DetailViewController : AVPlayerViewControllerDelegate{
+    
     @objc func didfinishplaying(note : NSNotification)
     {
         playerController.dismiss(animated: false,completion: {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let fitVC = storyboard.instantiateViewController(withIdentifier: "FeelFitViewController") as! FeelFitViewController
+            let fitVC = FeelFitViewController.instantiateFromAppStoryboard(appStoryboard: .Main)
             self.navigationController?.pushViewController(fitVC, animated: false)
         })
         
     }
-    
     
     func playerViewController(_ playerViewController: AVPlayerViewController, restoreUserInterfaceForPictureInPictureStopWithCompletionHandler completionHandler: @escaping (Bool) -> Void) {
         let currentviewController =  navigationController?.visibleViewController
@@ -78,18 +73,6 @@ class DetailViewController: UIViewController, AVPlayerViewControllerDelegate {
             currentviewController?.present(playerViewController,animated: true,completion:nil)
         }
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 extension DetailViewController : UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
@@ -99,7 +82,7 @@ extension DetailViewController : UICollectionViewDataSource, UICollectionViewDel
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell : VideoCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "videoCell", for: indexPath) as! VideoCollectionViewCell
-        cell.imgThumb.image = UIImage(named: arrImages[indexPath.row % 4])
+        cell.dictWorkOut = arrWorkOuts[indexPath.row % 4]
         return cell
     }
     
@@ -109,8 +92,5 @@ extension DetailViewController : UICollectionViewDataSource, UICollectionViewDel
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         startPlaying()
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        let fitVC = storyboard.instantiateViewController(withIdentifier: "FeelFitViewController") as! FeelFitViewController
-//        self.navigationController?.pushViewController(fitVC, animated: false)
     }
 }

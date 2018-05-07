@@ -3,7 +3,7 @@
 //  TVDemo
 //
 //  Created by Darshit Vadodaria on 27/04/18.
-//  Copyright © 2018 Darshit Vadodaria. All rights reserved.
+//  Copyright © 2018 Simform Solutions PVT LTD. All rights reserved.
 //
 
 import UIKit
@@ -12,6 +12,15 @@ class VideoCollectionViewCell: ParallaxCollectionViewCell {
     
     @IBOutlet weak var imgThumb: UIImageView!
     
+    var dictWorkOut : [String:Any]?{
+        didSet{
+            setData()
+        }
+    }
+    
+    func setData(){
+        self.imgThumb.image = UIImage(named:"\(dictWorkOut!["image"] ?? "")")
+    }
     fileprivate var widthToHeightRatio = CGFloat(0)
     
     required init?(coder aDecoder: NSCoder) {
