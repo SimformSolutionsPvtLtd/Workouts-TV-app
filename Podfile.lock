@@ -1,0 +1,12 @@
+PODS:
+  - ParallaxView (2.0.8)
+
+DEPENDENCIES:
+  - ParallaxView
+
+SPEC CHECKSUMS:
+  ParallaxView: c2df9e49ab58cd8e0cd0b9d449a211d6f76fd53f
+
+PODFILE CHECKSUM: 9eb6af4a0c465e43f555466ad87aabfcdc94b9e9
+
+COCOAPODS: 1.2.1

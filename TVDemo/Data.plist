@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Workouts</key>
+	<array>
+		<dict>
+			<key>title</key>
+			<string>Aerobic Exercise</string>
+			<key>infoText</key>
+			<string>Increase your breathing and heart rate</string>
+			<key>detailText</key>
+			<string>Aerobic exercises increase your breathing and heart rate and are the main component of overall fitness programs. They keep the circulatory system and lungs healthy, can stave off diabetes and heart disease and help you build up endurance.</string>
+			<key>image</key>
+			<string>Aerobics</string>
+		</dict>
+        <dict>
+            <key>title</key>
+            <string>Strength exercises</string>
+            <key>infoText</key>
+            <string>Keep your bones and muscles strong</string>
+            <key>detailText</key>
+            <string>These are important for keeping your bones and muscles strong and helping older adults maintain their independence. Strength training is beneficial in reducing falls and helping you do everyday activities that require lifting, such as carrying groceries.</string>
+            <key>image</key>
+            <string>Strength</string>
+        </dict>
+        <dict>
+            <key>title</key>
+            <string>Flexibility</string>
+            <key>infoText</key>
+            <string>Keep your body limber</string>
+            <key>detailText</key>
+            <string>Though not part of the CDC's official recommendations for maintaining good physical health, flexibility exercises can keep your body limber and help you maintain a wide range of motion. This is important because range of motion is often limited by things like arthritis.</string>
+            <key>image</key>
+            <string>Flexibility</string>
+        </dict>
+        <dict>
+            <key>title</key>
+            <string>Balance exercises</string>
+            <key>infoText</key>
+            <string>Strengthen the body's core and help prevent falls</string>
+            <key>detailText</key>
+            <string>Practicing and improving balance is important for older adults because it can strengthen the body's core and help prevent falls.</string>
+            <key>image</key>
+            <string>Balance</string>
+        </dict>
+	</array>
+</dict>
+</plist>
