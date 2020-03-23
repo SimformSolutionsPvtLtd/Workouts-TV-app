@@ -39,20 +39,20 @@ class DetailViewController: UIViewController{
         imgWorkOut.image = UIImage(named: "\(dictWorkOut?["image"] ?? "")")
     }
 
-    func startPlaying(){
-        
-        let url = URL.init(string: VIDEO_URL)
-        let player = AVPlayer(url:url!)
-        
+    func startPlaying() {
+        guard let path = Bundle.main.path(forResource: "workOut", ofType:"mp4") else {
+            debugPrint("video.m4v not found")
+            return
+        }
+        let player = AVPlayer(url: URL(fileURLWithPath: path))
         playerController = AVPlayerViewController()
         NotificationCenter.default.addObserver(self, selector: #selector(DetailViewController.didfinishplaying(note:)),name:NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: player.currentItem)
         playerController.player = player
         playerController.delegate = self
-        
         playerController.player?.play()
-        
         self.present(playerController,animated:true,completion:nil)
     }
+    
 }
 
 extension DetailViewController : AVPlayerViewControllerDelegate{

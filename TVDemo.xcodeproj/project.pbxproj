@@ -21,6 +21,8 @@
 		38CE91DE209833B700007581 /* FeelFitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CE91DD209833B700007581 /* FeelFitViewController.swift */; };
 		38CFD65F20A0381400311F9D /* Data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38CFD65D20A0381400311F9D /* Data.plist */; };
 		38CFD66020A0381400311F9D /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CFD65E20A0381400311F9D /* Constant.swift */; };
+		845E65382428AAE000035E43 /* workOut.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 845E65372428AAE000035E43 /* workOut.mp4 */; };
+		845E653A2428BD0400035E43 /* workout1.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 845E65392428BD0400035E43 /* workout1.m4a */; };
 		DED85DACAB7F1001A795894E /* Pods_TVDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A2FAFED710F147BB272893E /* Pods_TVDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +45,8 @@
 		38CFD65E20A0381400311F9D /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		3A2FAFED710F147BB272893E /* Pods_TVDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TVDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		450BF2665E19CE4E7217184F /* Pods-TVDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-TVDemo/Pods-TVDemo.release.xcconfig"; sourceTree = "<group>"; };
+		845E65372428AAE000035E43 /* workOut.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = workOut.mp4; sourceTree = "<group>"; };
+		845E65392428BD0400035E43 /* workout1.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = workout1.m4a; sourceTree = "<group>"; };
 		94BFAF68D0D76E9ECDB43C29 /* Pods-TVDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TVDemo/Pods-TVDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,6 +91,7 @@
 		387108862092E86900ACABBC /* TVDemo */ = {
 			isa = PBXGroup;
 			children = (
+				845E65362428AA9600035E43 /* Resource */,
 				387108872092E86900ACABBC /* AppDelegate.swift */,
 				387108892092E86900ACABBC /* ViewController.swift */,
 				3871089620931E7100ACABBC /* DetailViewController.swift */,
@@ -114,6 +119,15 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		845E65362428AA9600035E43 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				845E65392428BD0400035E43 /* workout1.m4a */,
+				845E65372428AAE000035E43 /* workOut.mp4 */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		FFDDF837A7A23BCE17CFFAB0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,7 +149,6 @@
 				387108812092E86900ACABBC /* Frameworks */,
 				387108822092E86900ACABBC /* Resources */,
 				54E53F08A5864441280707CE /* [CP] Embed Pods Frameworks */,
-				184C2A63573EB923FCAA3AB9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -190,42 +203,32 @@
 				38A12873209C1C91001669D1 /* BarlowSemiCondensed-Bold.ttf in Resources */,
 				3871088F2092E86900ACABBC /* Assets.xcassets in Resources */,
 				38A1287C209C1C91001669D1 /* BarlowSemiCondensed-Medium.ttf in Resources */,
+				845E65382428AAE000035E43 /* workOut.mp4 in Resources */,
 				3871088D2092E86900ACABBC /* Main.storyboard in Resources */,
 				38A1287F209C1C91001669D1 /* BarlowSemiCondensed-SemiBold.ttf in Resources */,
+				845E653A2428BD0400035E43 /* workout1.m4a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		184C2A63573EB923FCAA3AB9 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TVDemo/Pods-TVDemo-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		54E53F08A5864441280707CE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TVDemo/Pods-TVDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ParallaxView/ParallaxView.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ParallaxView.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TVDemo/Pods-TVDemo-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TVDemo/Pods-TVDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		585FA8DDF1CFA9D536D297F0 /* [CP] Check Pods Manifest.lock */ = {
@@ -234,13 +237,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TVDemo-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
